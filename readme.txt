@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: lukerumley, mikelopez
-Donate link: http://rumleydesign.com
+Donate link: http://rumleydesign.com/donate/
 Tags: categories, themes
 Requires at least: 2.9
 Tested up to: 3.2
