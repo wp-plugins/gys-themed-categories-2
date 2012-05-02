@@ -133,8 +133,8 @@ STRING;
 	    else {
 		// we are on a page, home page, or custom post type...don't apply new theme
 		unset($cat);
-			    }
-	    //echo "<h2>cat: " . $cat . "</h2>";
+	    }
+
 	    if($cat) {
 		// we have our category ID now so let's get the theme for it...
 		$theme=$this->GetOption('CategoryThemes',$cat);
@@ -142,17 +142,21 @@ STRING;
 		if($theme)$template=$theme;
 	    }
 	    else {
+		// grab current theme's stylesheet
 		$template = get_option('stylesheet');
 	    }
+
+	    // set Theme to current template, then grab full stylesheet location
 	    $this->Theme = $template;
 	    if (strtolower(substr(ABSPATH, 1, 1)) == ":" ) {
 		// we're apparently on a Windows box, so ABSPATH and WP_CONTENT_DIR are messed up as of WP 3.2
 		$tempstyleloc = substr(ABSPATH, 0, strlen(ABSPATH)-1) . "\\wp-content\\themes\\" . $this->Theme . "\\style.css";
 	    }
 	    else {
-		// ah, unix
+		// ah, linux/unix
 		$tempstyleloc = WP_CONTENT_DIR . "/themes/" . $this->Theme . "/style.css";
 	    }
+	    // grab template from stylesheet location
 	    $themedata = get_theme_data($tempstyleloc);
 	    if ($themedata["Template"]) {
 		return $themedata["Template"];
