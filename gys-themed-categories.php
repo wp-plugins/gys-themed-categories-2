@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: GYS Themed Categories
-Plugin URI: http://rumleydesign.com/plugins/gys-themed-categories-2/
+Plugin URI: http://rumleydesign.com/wordpress/2011/gys-themed-categories/
 Description: This plugin allows you to assign themes to each of your Wordpress categories. To assign themes to your categories, just go to Posts->Categories and you'll see a drop-down menu of available themes at the bottom of the form.
-Author: Luke Rumley / Mike Lopez (http://mikelopez.info/)
-Version: 2.4
+Author: Luke Rumley / Mike Lopez
+Version: 2.5
 Author URI: http://rumleydesign.com/
 */
 if(!class_exists('GYSThemedCategories')) {
@@ -15,6 +15,7 @@ if(!class_exists('GYSThemedCategories')) {
 	    $this->Options=get_option($this->OptionName);
 	}
 
+	// GET CURRENT THEME APPLIED TO TAXONOMY
 	function GetOption() {
 	    $options=func_get_args();
 	    $option=$this->Options;
@@ -32,6 +33,7 @@ if(!class_exists('GYSThemedCategories')) {
 	    return $option;
 	}
 
+	// SET THEME TO SELECTED TAXONOMY
 	function SetOptions() {
 	    $options=func_get_args();
 	    for($i=0;$i<count($options);$i+=2) {
