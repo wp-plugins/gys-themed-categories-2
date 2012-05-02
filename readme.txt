@@ -1,9 +1,9 @@
 === Plugin Name ===
-Contributors: lukerumley, mikelopez
+Contributors: lukerumley
 Donate link: http://rumleydesign.com/donate/
 Tags: categories, themes
 Requires at least: 2.9
-Tested up to: 3.2
+Tested up to: 3.3.2
 Stable tag: 2.4
 
 This plugin allows you to assign a theme to a specific category.
@@ -36,10 +36,11 @@ e.g.
 == Changelog ==
 
 = 2.4 =
-* Tested in WP 3.2
+* Tested in WP 3.2-3.3.2
 * Adds child theme capability
 * Adds the ability to assign a theme to a new category as it is created
 * Now ignores pages and the home page, so the current theme is applied there
+* Added plugin banner image :)
 
 = 2.3 =
 * Slightly modified by Luke Rumley (@lukerumley) to work in WordPress 3+
