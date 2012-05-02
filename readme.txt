@@ -18,8 +18,6 @@ This version adds child theme capability, and the ability to assign a theme to a
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
 1. Upload `gys-themed-categories-2` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Navigate to the Categories page and edit a category.
